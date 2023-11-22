@@ -14,7 +14,7 @@ const endorsementListInDB = ref(database, 'endorsementList');
 // Dom elements
 const textArea = document.querySelector('#text-area');
 const publishBtn = document.querySelector('#publish-btn');
-const endorsementContainer = document.querySelector('#endorsementContainer');
+const endorsementContainer = document.querySelector('#endorsement-container');
 
 // Event listeners
 
@@ -23,22 +23,26 @@ publishBtn.addEventListener('click', () => {
 
     push(endorsementListInDB, textareaValue);
 
-
     console.log(textareaValue);
+    appendEndorsementItemList();
+
+    clearTextarea();
+
 });
-
-
 
 // Functions
 function appendEndorsementItemList() {
     let newEl = document.createElement('li');
-    newEl.textContent = textarea.value;
+    newEl.textContent = textArea.value;
+    newEl.classList.add('endorsement-list');
 
-    endorsementContainer.appendChild(newEl);
+    endorsementContainer.append(newEl);
+
+    console.log(newEl);
     
 }
 
 function clearTextarea() {
-    textarea.value = '';
+    textArea.value = '';
 }
 
