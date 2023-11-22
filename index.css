@@ -70,7 +70,7 @@ img{
     background-color: #2b99f3;
     border: none;
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 20px auto;
     padding: 10px 20px;
     cursor: pointer;
     height: 50px;
@@ -84,7 +84,7 @@ p{
     line-height: normal;
     font-weight: 700;
     color: #FFF;
-    margin: 20px auto;
+    margin: 0 auto;
     font-family: 'Josefin Sans' ;
 }
 
@@ -100,8 +100,14 @@ p{
 .endorsement-list {
     text-align: center;
     background: #FFF;
-    width: 320px;
-    margin: 10px auto;
+    min-width: 320px;
+    max-width: 320px;
+    margin: 7px auto;
     color: #1B1924;
     height: 72px;
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 10px 15px;
+    cursor: pointer;
 }
